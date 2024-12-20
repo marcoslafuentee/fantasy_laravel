@@ -1,0 +1,296 @@
+/* Estilos generales - Aplican a todo el sitio */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow: auto; /* Permitir scroll en la página principal */
+}
+
+/* Header Estilos */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Estilos para los botones de Log in y Register */
+.auth-buttons a {
+    background-color: #007BFF; /* Color de fondo azul */
+    color: #fff; /* Color de texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    text-decoration: none; /* Quitar subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    display: inline-block; /* Mantener el elemento en línea */
+}
+
+.auth-buttons a:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro al pasar el ratón */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Aumentar la sombra en hover */
+}
+
+
+/* Botones en el header y en otras partes */
+.header-buttons a, .btn, .main-page .main-section a {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.header-buttons a:hover, .btn:hover, .main-page .main-section a:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos específicos para la página MAIN */
+.main-page {
+    overflow: auto;
+    height: auto; /* Permitir que el contenedor se ajuste a su contenido */
+    padding: 0;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Agrupar botones en una línea */
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Estilos específicos para la página de Registro */
+.register-page, .login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.register-container, .login-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.register-container h2, .login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Estilos para botones */
+.btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.register-container p, .login-container p {
+    margin-top: 15px;
+    color: #333;
+}
+
+.register-container p a, .login-container p a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.register-container p a:hover, .login-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para el contenedor del recuadro gris */
+.box-container {
+    background-color: #f0f0f0; /* Color de fondo gris claro */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin: 0 auto; /* Centrar horizontalmente */
+    width: 1200px; /* Ancho máximo del recuadro */
+    overflow: hidden; /* Ocultar el contenido que se desborde */
+}
+
+/* Estilo para el menú de navegación dentro del recuadro gris */
+.menu {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 20px; /* Espacio entre el menú y la tabla */
+}
+
+.menu a {
+    text-decoration: none;
+    color: #007BFF;
+    padding: 10px 20px;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Estilo para el contenedor de la tabla */
+.table-container {
+    width: 100%; /* Ancho completo del contenedor */
+    height: auto; /* Ajustar la altura al contenido */
+    overflow-x: auto; /* Desplazamiento horizontal si es necesario */
+    margin-top: 20px; /* Espacio superior para separar de otros elementos */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para la paginación */
+/* Estilo general para la paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a, .pagination span {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f9f9f9;
+    font-size: 0.9em; /* Ajustar el tamaño de la fuente */
+    line-height: 1.4; /* Mejorar la alineación vertical */
+    text-align: center; /* Alinear el texto al centro */
+}
+
+.pagination a:hover, .pagination a:focus {
+    background-color: #e9ecef;
+}
+
+.pagination .active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.pagination .disabled {
+    color: #ddd;
+    border-color: #ddd;
+    cursor: not-allowed;
+}
+
+/* Estilo específico para los iconos */
+.pagination .prev, .pagination .next {
+    font-size: 1.2em; /* Ajustar el tamaño del icono */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background-color: #f9f9f9;
+    text-align: center;
+    line-height: 1; /* Alinear verticalmente los iconos */
+}
+
+.pagination .prev:hover, .pagination .next:hover {
+    background-color: #e9ecef;
+}
+
+.pagination .prev.disabled, .pagination .next.disabled {
+    background-color: #f4f4f4;
+    cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+/* Ajuste de estilo para la tabla específica de equipo */
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container th, .table-container td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.table-container th {
+    background-color: #e9ecef;
+    font-weight: bold;
+}
+
+.table-container tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-container tr td[colspan="3"] {
+    background-color: #f2f2f2;
+    height: 10px; /* Ajuste de la altura del separador */
+}

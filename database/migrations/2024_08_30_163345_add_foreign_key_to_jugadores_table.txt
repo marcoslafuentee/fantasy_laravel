@@ -1,0 +1,35 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::table('jugadores', function (Blueprint $table) {
+
+            // Define la clave foránea apuntando a la tabla equiposNFL
+            $table->foreign('equipo_nfl_id')
+                ->references('id')
+                ->on('equiposNFL') // Nombre correcto de la tabla
+                ->onDelete('set null'); // Opcional: Eliminar o establecer a null si el equipo se elimina
+
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::table('jugadores', function (Blueprint $table) {
+            // Elimina la clave foránea
+            $table->dropForeign(['equipo_nfl_id']);
+        });
+    }
+};
